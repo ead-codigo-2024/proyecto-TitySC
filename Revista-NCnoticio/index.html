@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NC Noticio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;700&family=Big+Shoulders+Display:wght@400&family=Pathway+Gothic+One:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Albert Sans', sans-serif;
+            line-height: 1.6;
+            background: rgba(255, 255, 255, 0.2) url('./Imagenes/Patron-de-fondo-NC.jpg') repeat;
+            background-size: 33.33% auto;
+            color: white;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.75) url('./Imagenes/EstrellasNC.jpeg') no-repeat center bottom;
+            background-size: cover;
+            padding: 8px 15px;
+            color: white;
+            position: sticky;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-img {
+            width: 40px;
+        }
+
+        .logo-text {
+            font-family: 'Big Shoulders Display', sans-serif;
+            font-size: 24px;
+            font-weight: 500;
+            color: white;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 60px;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            font-family: 'Albert Sans', sans-serif;
+            text-transform: uppercase;
+            color: white;
+            font-weight: 700;
+            font-size: 13px;
+            transition: color 0.3s;
+        }
+
+        .nav-menu a:hover, .nav-menu a.active {
+            color: #FFD700;
+        }
+
+        .main-banner {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            text-align: center;
+            overflow: hidden;
+            margin-top: 0;
+        }
+
+        .main-banner::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('./Imagenes/PlanterioImagenFondo.jpg') no-repeat center center;
+            background-size: cover;
+            z-index: -2;
+        }
+
+        .main-banner::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: -2;
+        }
+
+        .main-banner h1 {
+            font-family: 'Pathway Gothic One', sans-serif;
+            font-size: 56px;
+            font-weight: 400;
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        .main-banner h2 {
+            font-family: 'Pathway Gothic One', sans-serif;
+            font-size: 36px;
+            font-weight: 200;
+            color: white;
+        }
+
+        .carousel-banner {
+            width: 94%;
+            background: rgba(255, 255, 255, 0.5);
+            position: absolute;
+            top: 1050px;
+            left: 3%;
+            height: calc(100% - 1050px);
+            border-radius: 20px;
+            z-index: -4;
+        }
+
+        .carousel-section {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .carousel-title-container {
+            position: relative;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 10px 0;
+            width: 100%;
+        }
+
+        .carousel-title {
+            font-family: 'Pathway Gothic One', sans-serif;
+            font-size: 48px;
+            font-weight: 400;
+            color: #FFD700;
+            text-align: center;
+            margin-top: 50px;
+            margin-bottom: 20px;
+        }
+
+        .content-carousel {
+            display: flex;
+            gap: 60px;
+            overflow-x: auto;
+            padding: 40px;
+            margin: 50px 0;
+            scroll-snap-type: x mandatory;
+            position: relative;
+            z-index: 1;
+        }
+
+        .carousel-item {
+            flex: 0 0 auto;
+            width: 350px;
+            text-align: center;
+            scroll-snap-align: start;
+            position: relative;
+            transition: color 0.3s;
+        }
+
+        .carousel-item:hover h3 {
+            color: #FFD700;
+        }
+
+        .circle-img {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto 15px;
+            border: 3px solid #000;
+            transition: border-color 0.3s;
+        }
+
+        .carousel-item:hover .circle-img {
+            border-color: #FFD700;
+        }
+
+        .circle-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .carousel-item h3 {
+            color: black;
+        }
+
+        .footer-banner {
+            background: rgba(0, 0, 0, 0.9);
+            padding: 20px;
+            color: white;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-left {
+            flex: 1;
+        }
+
+        .footer-center {
+            flex: 1;
+            text-align: center;
+        }
+
+        .footer-right {
+            flex: 1;
+            text-align: right;
+        }
+
+        .footer-right p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">
+            <img src="Imagenes/Logo-NOTICIO.png" alt="Logo NOTICIO" class="logo-img">
+            <div class="logo-text">NOTICIO</div>
+        </div>
+        <nav class="nav-menu">
+            <a href="index.html" style="text-decoration: none;">INICIO</a>
+            <a href="publicaciones.html" style="text-decoration: none;">PUBLICACIONES RECIENTES</a>
+            <a href="editorial.html" style="text-decoration: none;">EDITORIAL</a>
+            <a href="contacto.html" style="text-decoration: none;">CONTACTO</a>
+        </nav>
+    </header>
+
+    <div class="main-banner full-page-banner">
+        <h1>PLANETARIO CIO</h1>
+        <h2>Una ventana al universo para chicos y grandes</h2>
+    </div>
+
+    <div class="carousel-banner"></div>
+
+    <div class="carousel-section">
+        <div class="carousel-title-container">
+            <h2 class="carousel-title" style="font-size: 48px; text-align: center;">Exploraciones Destacadas</h2>
+        </div>
+        <div class="content-carousel">
+            <div class="carousel-item">
+                <a href="club-de-niños.html" style="text-decoration: none;">
+                    <div class="circle-img">
+                        <img src="Imagenes/clubdeniñosNC.jpg" alt="Club de Niños">
+                    </div>
+                    <h3>Club de niños en las ciencias</h3>
+                </a>
+            </div>
+            <div class="carousel-item">
+                <a href="planetario-cio.html" style="text-decoration: none;">
+                    <div class="circle-img">
+                        <img src="Imagenes/planetariocio.jpg" alt="Planetario CIO">
+                    </div>
+                    <h3>El planetario del CIO, una ventana al universo para chicos y grandes</h3>
+                </a>
+            </div>
+            <div class="carousel-item">
+                <a href="talleres-ciencia.html" style="text-decoration: none;">
+                    <div class="circle-img">
+                        <img src="Imagenes/talleresNC.jpg" alt="Talleres de Ciencias">
+                    </div>
+                    <h3>Talleres de ciencias para todos</h3>
+                </a>
+            </div>
+            <div class="carousel-item">
+                <a href="divulgacion-ciencia.html" style="text-decoration: none;">
+                    <div class="circle-img">
+                        <img src="Imagenes/divulgacionNC.jpg" alt="La divulgación">
+                    </div>
+                    <h3>La divulgación, una de mis mayores satisfacciones dentro del CIO</h3>
+                </a>
+            </div>
+            <div class="carousel-item">
+                <a href="sergio-regules.html" style="text-decoration: none;">
+                    <div class="circle-img">
+                        <img src="Imagenes/sergioregulesNC.jpg" alt="Sergio de Régules">
+                    </div>
+                    <h3>Sergio de Régules</h3>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="background-rectangle"></div>
+
+    <div class="footer-banner">
+        <div class="footer-content">
+            <div class="footer-left">
+                <img src="Imagenes/iconos-rrss-NC.png" alt="Redes Sociales" class="social-icons" style="width: 200px; height: auto;">
+            </div>
+            <div class="footer-center">
+                <p style="text-align: center;">Centro de Investigaciones en Óptica A.C. - Todos los derechos reservados &copy; 2024</p>
+            </div>
+            <div class="footer-right">
+                <p>Loma del Bosque 115<br>Col. Lomas del Campestre<br>C.P. 37150 León, Guanajuato, México</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

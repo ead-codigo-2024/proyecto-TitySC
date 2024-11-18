@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Club de Niños en las Ciencias</title>
+    <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;700&family=Big+Shoulders+Display:wght@400&family=Pathway+Gothic+One:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Albert Sans', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2, h3 {
+            font-family: 'Pathway Gothic One', sans-serif;
+            color: #444;
+            text-align: center;
+        }
+
+        .content-section {
+            margin-bottom: 60px;
+            padding: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .content-section:nth-child(even) {
+            background-color: #f0f0f0;
+        }
+
+        .content-section img {
+            max-width: 45%;
+            height: auto;
+            margin: 10px;
+            flex: 1 1 45%;
+            border-radius: 15px;
+        }
+
+        .content-section-text {
+            flex: 1 1 50%;
+            margin: 10px;
+        }
+
+        .activities-list {
+            list-style-type: disc;
+            margin: 20px;
+            padding-left: 40px;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        .footer p {
+            font-family: 'Albert Sans', sans-serif;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">
+            <img src="Imagenes/Logo-NOTICIO.png" alt="Logo NOTICIO" class="logo-img">
+            <div class="logo-text">NOTICIO</div>
+        </div>
+        <nav class="nav-menu">
+            <a href="index.html" style="text-decoration: none;">INICIO</a>
+            <a href="publicaciones.html" style="text-decoration: none;">PUBLICACIONES RECIENTES</a>
+            <a href="editorial.html" style="text-decoration: none;">EDITORIAL</a>
+            <a href="contacto.html" style="text-decoration: none;">CONTACTO</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1 style="font-size: 3rem;">Club de Niños en las Ciencias</h1>
+
+        <div class="content-section">
+            <div class="content-section-text">
+                <p>El <strong>Club de Niños en las Ciencias</strong> es un programa permanente dirigido a niños, jóvenes a partir de los 5 años de edad, y a los padres de familia que los acompañan. Su objetivo es fomentar una cultura de aceptación de la ciencia en la sociedad, permitiendo a los niños y jóvenes realizar actividades relacionadas con la ciencia y la tecnología de una forma divertida, donde ellos mismos puedan hacer sus propios descubrimientos.</p>
+            </div>
+            <img src="Imagenes/niños-cambiodecolor1.jpg" alt="Niños participando en una actividad de química con experimentos de cambio de color." />
+        </div>
+
+        <div class="content-section">
+            <img src="Imagenes/niños-cambiodecolor2.jpg" alt="Sesiones interactivas sobre óptica y fenómenos de la luz." />
+            <div class="content-section-text">
+                <h2>Actividades</h2>
+                <p>Cada sesión incluye una <strong>explicación breve del fenómeno de estudio</strong> y varios experimentos interactivos que realizan los participantes. Estas actividades no solo permiten experimentar y aprender de una forma práctica, sino también motivan a los niños y jóvenes a interesarse por carreras de ciencia y tecnología, áreas en las que nuestro país necesita más profesionales.</p>
+                <p>El <strong>Club de Niños en las Ciencias</strong> es un espacio inclusivo, donde todos los interesados son bienvenidos, sin importar su edad. Hemos tenido desde niños pequeños hasta estudiantes de posgrado que asisten para disfrutar de las actividades según sus intereses personales.</p>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <div class="content-section-text">
+                <h2>Historia y Formato</h2>
+                <p>Desde su inicio en <strong>julio de 2004</strong>, el club ha organizado sesiones mensuales con temas variados como óptica, química, física, biología, y robótica. Los temas son impartidos por investigadores, técnicos y estudiantes del Centro de Investigaciones en Óptica (CIO), así como invitados especiales. Las sesiones se realizan el primer jueves de cada mes a las 4:30 p.m. en el salón de usos múltiples de la institución.</p>
+                <p>El club comenzó con un <strong>rally de experimentos</strong> organizado por el entonces recientemente formado grupo técnico de divulgación. Desde entonces, el formato de las sesiones se ha ido adaptando para satisfacer las necesidades de los participantes, lo que ha resultado en un enfoque que considera la retroalimentación y solicitudes específicas de los asistentes.</p>
+            </div>
+            <img src="Imagenes/niños-cambiodecolor3.jpg" alt="Taller de robótica donde los niños construyen modelos básicos." />
+        </div>
+
+        <div class="content-section">
+            <h2>Temas Abordados</h2>
+            <ul class="activities-list">
+                <li><strong>Óptica</strong>: explorando los misterios de la luz y sus propiedades.</li>
+                <li><strong>Química</strong>: experimentos para descubrir cambios de color y reacciones.</li>
+                <li><strong>Física</strong>: demostraciones que ayudan a entender conceptos como la energía y el movimiento.</li>
+                <li><strong>Biología y Robótica</strong>: actividades que acercan a los participantes al mundo de los seres vivos y la tecnología.</li>
+            </ul>
+        </div>
+
+        <div class="content-section" style="text-align: center;">
+            <div style="display: flex; justify-content: center; gap: 20px;">
+                <img src="Imagenes/niñoutilzandomicroscopioNC.jpg" alt="Niño utilizando un microscopio en una actividad del club." style="width: 45%; height: auto; object-fit: cover; border-radius: 15px;" />
+                <img src="Imagenes/niños-cambiodecolor4.jpg" alt="Sesión en el salón de usos múltiples con niños y familias participando en las actividades." style="width: 45%; height: auto; object-fit: cover; border-radius: 15px;" />
+            </div>
+            <p style="margin-top: 20px;">Si deseas conocer más sobre las próximas sesiones o estás interesado en participar, te esperamos el <strong>primer jueves de cada mes a las 4:30 p.m.</strong> en nuestras instalaciones. Todos son bienvenidos a formar parte de esta aventura científica.</p>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>Centro de Investigaciones en Óptica A.C. - Todos los derechos reservados &copy; 2024</p>
+    </footer>
+</body>
+</html>

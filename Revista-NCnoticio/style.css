@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Albert Sans', sans-serif;
+    line-height: 1.6;
+    position: relative;
+    background: rgba(255, 255, 255, 0.2) url('./Imagenes/Patron-de-fondo-NC.jpg') repeat;
+    background-size: 33.33% auto;
+    color: white;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.75) url('./Imagenes/EstrellasNC.jpeg') no-repeat center bottom;
+    background-size: cover;
+    padding: 8px 15px;
+    color: white;
+    position: relative;
+    margin-bottom: 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-img {
+    width: 40px;
+}
+
+.logo-text {
+    font-family: 'Big Shoulders Display', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    color: white;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    font-family: 'Albert Sans', sans-serif;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 700;
+    font-size: 13px;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #FFD700;
+}
+
+.main-banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    padding: 150px 0;
+    text-align: center;
+    overflow: hidden;
+}
+
+.main-banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('./Imagenes/PlanterioImagenFondo.jpg') no-repeat center center;
+    background-size: cover;
+    z-index: -2;
+}
+
+.main-banner::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: -1;
+}
+
+.main-banner h1 {
+    font-family: 'Pathway Gothic One', sans-serif;
+    font-size: 56px;
+    font-weight: 400;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.main-banner h2 {
+    font-family: 'Pathway Gothic One', sans-serif;
+    font-size: 36px;
+    font-weight: 200;
+    color: white;
+}
