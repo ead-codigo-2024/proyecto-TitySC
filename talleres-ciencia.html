@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talleres de Ciencia - NC Noticio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;700&family=Big+Shoulders+Display:wght@400&family=Pathway+Gothic+One:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Albert Sans', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2, h3 {
+            font-family: 'Pathway Gothic One', sans-serif;
+            color: #444;
+            text-align: center;
+        }
+
+        .content-section {
+            margin-bottom: 60px;
+            padding: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .content-section:nth-child(even) {
+            background-color: #f0f0f0;
+        }
+
+        .content-section img {
+            max-width: 48%;
+            height: auto;
+            margin: 10px;
+            flex: 1 1 48%;
+            border-radius: 15px;
+        }
+
+        .content-section-text {
+            flex: 1 1 100%;
+            margin: 10px;
+        }
+
+        .activities-list {
+            list-style-type: disc;
+            margin: 20px;
+            padding-left: 40px;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        .footer p {
+            font-family: 'Albert Sans', sans-serif;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">
+            <img src="Imagenes/Logo-NOTICIO.png" alt="Logo NOTICIO" class="logo-img">
+            <div class="logo-text">NOTICIO</div>
+        </div>
+        <nav class="nav-menu">
+            <a href="index.html" style="text-decoration: none;">INICIO</a>
+            <a href="publicaciones.html" style="text-decoration: none;">PUBLICACIONES RECIENTES</a>
+            <a href="editorial.html" style="text-decoration: none;">EDITORIAL</a>
+            <a href="contacto.html" style="text-decoration: none;">CONTACTO</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1 style="font-size: 3rem;">Talleres de Ciencia - Divulgación para Todos</h1>
+
+        <div class="content-section">
+            <div class="content-section-text">
+                <p><strong>CHARVEL LÓPEZ</strong></p>
+                <p>Hoy en día es innegable que la educación es una herramienta invaluable para el oportuno y completo desarrollo de las sociedades. Los ciudadanos al contar con una educación reforzada en diversas áreas del conocimiento, (matemáticas, español, artes, ciencias, etc.) tendrán las herramientas necesarias para enfrentar su realidad y aportar soluciones a la comunidad.</p>
+                <p>La importancia de transmitir y reforzar el conocimiento en los más jóvenes debe ser una responsabilidad primordial para los representantes del presente, para asegurar la supervivencia física e intelectual de la especie y garantizar una estable convivencia y desarrollo social mediante el pensamiento racional. Bajo este tenor, la Coordinación de Divulgación Científica del CIO, atendiendo su responsabilidad con los ciudadanos, se ha enfocado en acercar la ciencia y la tecnología a diversos sectores de la sociedad de manera atractiva y accesible con el fin de concientizar, instruir y reforzar educativamente mediante el pensamiento científico.</p>
+            </div>
+            <img src="Imagenes/taller-ciencias-1.jpg" alt="Niños participando en un taller de ciencia." />
+            <img src="Imagenes/taller-ciencias-2.jpg" alt="Participantes en un taller práctico de ciencia." />
+        </div>
+
+        <div class="content-section">
+            <div class="content-section-text">
+                <p>Por ello, se cuenta con un programa de talleres científicos orientado principal, pero no exclusivamente, a niños y jóvenes de preescolar, primaria, secundaria y preparatoria con la intención de fomentar las vocaciones científicas para garantizar la formación de futuros científicos y tecnólogos en el país, así mismo contrarrestando el analfabetismo científico detectado en la sociedad actual.</p>
+                <p>Los talleres abarcan diversos temas como:</p>
+                <ul class="activities-list">
+                    <li><strong>Holografía</strong></li>
+                    <li><strong>Espectroscopia</strong></li>
+                    <li><strong>Ilusiones ópticas</strong></li>
+                    <li><strong>Cámaras oscuras</strong></li>
+                    <li><strong>Telescopio galileano</strong></li>
+                </ul>
+                <p>Estos temas se transmiten a los niños y jóvenes con principios de empatía en el lenguaje, humildad intelectual y entusiasmo científico, logrando así una conexión amigable con la ciencia y fomentando la curiosidad y el pensamiento racional.</p>
+            </div>
+            <img src="Imagenes/talleresNC.jpg" alt="Participantes disfrutando de un taller en el CIO." style="width: 60%; height: auto; object-fit: cover; border-radius: 15px; margin: 0 auto; display: block;" />
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>Centro de Investigaciones en Óptica A.C. - Todos los derechos reservados &copy; 2024</p>
+    </footer>
+</body>
+</html>
